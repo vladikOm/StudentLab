@@ -1,0 +1,9 @@
+﻿  Data.cpp
+  main.cpp
+  Student.cpp
+  Создание кода...
+C:\Programing\Stud\Student\Data.cpp(39): warning C4715: constants::getNameWeek: значение возвращается не при всех путях выполнения
+C:\Programing\Stud\Student\Data.cpp(23): warning C4715: constants::getDayMonth: значение возвращается не при всех путях выполнения
+C:\Programing\Stud\Student\Data.cpp(60): warning C4715: constants::getNameMonth: значение возвращается не при всех путях выполнения
+  LINK : не найден или не выполнена сборка C:\Programing\Stud\Student\x64\Debug\Student c++ Program.exe при последней инкрементной компоновке; выполняется полная компоновка
+  Student c++ Program.vcxproj -> C:\Programing\Stud\Student\x64\Debug\Student c++ Program.exe
