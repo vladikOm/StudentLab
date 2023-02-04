@@ -6,23 +6,23 @@ using namespace std;
 struct  constants
 {              
     enum Month { January,February, March, April, May, June, July, 
-                 August, September, October, November, December };                     //Перечислення для місяців року 
+                 August, September, October, November, December };                     //РџРµСЂРµС‡РёСЃР»РµРЅРЅСЏ РґР»СЏ РјС–СЃСЏС†С–РІ СЂРѕРєСѓ 
    
-    enum Week { Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday };      //Перечислення для  днів тижня 
+    enum Week { Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday };      //РџРµСЂРµС‡РёСЃР»РµРЅРЅСЏ РґР»СЏ  РґРЅС–РІ С‚РёР¶РЅСЏ 
 
 
-    int getDayMonth(Month month, bool isleapYear = false); // метод отримати число скільки містить днів введений місяць
+    int getDayMonth(Month month, bool isleapYear = false); // РјРµС‚РѕРґ РѕС‚СЂРёРјР°С‚Рё С‡РёСЃР»Рѕ СЃРєС–Р»СЊРєРё РјС–СЃС‚РёС‚СЊ РґРЅС–РІ РІРІРµРґРµРЅРёР№ РјС–СЃСЏС†СЊ
 
 
-    string getNameWeek(Week week);  // метод отримати ім'я назву дня тижня
+    string getNameWeek(Week week);  // РјРµС‚РѕРґ РѕС‚СЂРёРјР°С‚Рё С–Рј'СЏ РЅР°Р·РІСѓ РґРЅСЏ С‚РёР¶РЅСЏ
 
 
-    string getNameMonth(Month month);  // метод отримати ім'я назву місяця
+    string getNameMonth(Month month);  // РјРµС‚РѕРґ РѕС‚СЂРёРјР°С‚Рё С–Рј'СЏ РЅР°Р·РІСѓ РјС–СЃСЏС†СЏ
 
-    Week getWeek(int day, int month, int year);  // метод отримати
+    Week getWeek(int day, int month, int year);  // РјРµС‚РѕРґ РѕС‚СЂРёРјР°С‚Рё
 
 
-    bool isleapYear(int year);    //Функція для перевірки чи високосний чи ні день в який народився студент
+    bool isleapYear(int year);    //Р¤СѓРЅРєС†С–СЏ РґР»СЏ РїРµСЂРµРІС–СЂРєРё С‡Рё РІРёСЃРѕРєРѕСЃРЅРёР№ С‡Рё РЅС– РґРµРЅСЊ РІ СЏРєРёР№ РЅР°СЂРѕРґРёРІСЃСЏ СЃС‚СѓРґРµРЅС‚
 
 
 
@@ -32,12 +32,13 @@ void checkInputChar(char * str, const int size);
 void checkInputInt(int& t, int N, int Z);
 struct Data
 {
-    constants  calendar;//Об'єкт структури    constants
+    constants  calendar;//РћР±'С”РєС‚ СЃС‚СЂСѓРєС‚СѓСЂРё    constants
 
-    int year, month, day;//Члени структури Дата 
+    int year, month, day;//Р§Р»РµРЅРё СЃС‚СЂСѓРєС‚СѓСЂРё Р”Р°С‚Р° 
 
-    //Перегрузка через дружні функції
-    friend ostream& operator << (ostream& os, Data& calendar);        //Перегрузка виводу
-    friend istream& operator >> (istream& in, Data& t);               //Перегрузка вводу
+    //РџРµСЂРµРіСЂСѓР·РєР° С‡РµСЂРµР· РґСЂСѓР¶РЅС– С„СѓРЅРєС†С–С—
+    friend ostream& operator << (ostream& os, Data& calendar);        //РџРµСЂРµРіСЂСѓР·РєР° РІРёРІРѕРґСѓ
+    friend istream& operator >> (istream& in, Data& t);               //РџРµСЂРµРіСЂСѓР·РєР° РІРІРѕРґСѓ
 };
+
 
