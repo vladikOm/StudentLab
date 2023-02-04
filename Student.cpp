@@ -1,39 +1,40 @@
+
+
 #include "Student.h"
 #include"Data.h"
 void  input(Student* temp, const int& n) //
 {
-    cout << "Ââåäiòü äàíi ïðî ñòóäåíòiâ:  " << endl;
+    cout << "Ð’Ð²ÐµÐ´iÑ‚ÑŒ Ð´Ð°Ð½i Ð¿Ñ€Ð¾ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚iÐ²:  " << endl;
     for (int i = 0; i < n; i++)
     {
          
         checkInputChar(temp[i].surname,lengt );
 
-        cout << "\nÂâåäiòü äåíü íàðîäæåííÿ  ñòóäåíòà   : " << temp[i].surname << " \n " << endl;
+        cout << "\nÐ’Ð²ÐµÐ´iÑ‚ÑŒ Ð´ÐµÐ½ÑŒ Ð½Ð°Ñ€Ð¾Ð´Ð¶ÐµÐ½Ð½Ñ  ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°   : " << temp[i].surname << " \n " << endl;
         cin >> temp[i].Birthday;
-        cout << "\nÂâåäiòü íîìåð ãðóïè  ñòóäåíòà : " ;
-        //Íîìåð ãðóïè öå ìàêñèìóì 3 öèôðîâå öèñëî 
+        cout << "\nÐ’Ð²ÐµÐ´iÑ‚ÑŒ Ð½Ð¾Ð¼ÐµÑ€ Ð³Ñ€ÑƒÐ¿Ð¸  ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° : " ;
+        //ÐÐ¾Ð¼ÐµÑ€ Ð³Ñ€ÑƒÐ¿Ð¸ Ñ†Ðµ Ð¼Ð°ÐºÑÐ¸Ð¼ÑƒÐ¼ 3 Ñ†Ð¸Ñ„Ñ€Ð¾Ð²Ðµ Ñ†Ð¸ÑÐ»Ð¾ 
         checkInputInt( temp[i].group , 0,999) ;
 
 
-        cout << "\nÂâåäiòü 5 îöiíîê  â³ä [ 0 - 12 ] ñòóäåíòà :" << temp[i].surname << endl;
-        //Ïåðåâ³ðêà íà ââîä ò³ëüêè öèôð â³ä 0 äî 12
-        cout << "Îöiíêà ç ìàòåìàòèêè     :    "; checkInputInt (temp[i].marksStudent.mark1, 0 ,12);
-        cout << "\nÎöiíêà ç óêð  ìîâè    :    "; checkInputInt (temp[i].marksStudent.mark2, 0, 12);
-        cout << "\nÎöiíêà ç õiìi¿        :    "; checkInputInt (temp[i].marksStudent.mark3, 0, 12);
-        cout << "\nÎöiíêà ç áiîëîãi¿     :    "; checkInputInt (temp[i].marksStudent.mark4, 0, 12);
-        cout << "\nÎöiíêà ç ôiçêóëüòóðè  :    "; checkInputInt (temp[i].marksStudent.mark5, 0, 12);
+        cout << "\nÐ’Ð²ÐµÐ´iÑ‚ÑŒ 5 Ð¾Ñ†iÐ½Ð¾Ðº  Ð²Ñ–Ð´ [ 0 - 12 ] ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° :" << temp[i].surname << endl;
+        //ÐŸÐµÑ€ÐµÐ²Ñ–Ñ€ÐºÐ° Ð½Ð° Ð²Ð²Ð¾Ð´ Ñ‚Ñ–Ð»ÑŒÐºÐ¸ Ñ†Ð¸Ñ„Ñ€ Ð²Ñ–Ð´ 0 Ð´Ð¾ 12
+        cout << "ÐžÑ†iÐ½ÐºÐ° Ð· Ð¼Ð°Ñ‚ÐµÐ¼Ð°Ñ‚Ð¸ÐºÐ¸     :    "; checkInputInt (temp[i].marksStudent.mark1, 0 ,12);
+        cout << "\nÐžÑ†iÐ½ÐºÐ° Ð· ÑƒÐºÑ€  Ð¼Ð¾Ð²Ð¸    :    "; checkInputInt (temp[i].marksStudent.mark2, 0, 12);
+        cout << "\nÐžÑ†iÐ½ÐºÐ° Ð· Ñ…iÐ¼iÑ—        :    "; checkInputInt (temp[i].marksStudent.mark3, 0, 12);
+        cout << "\nÐžÑ†iÐ½ÐºÐ° Ð· Ð±iÐ¾Ð»Ð¾Ð³iÑ—     :    "; checkInputInt (temp[i].marksStudent.mark4, 0, 12);
+        cout << "\nÐžÑ†iÐ½ÐºÐ° Ð· Ñ„iÐ·ÐºÑƒÐ»ÑŒÑ‚ÑƒÑ€Ð¸  :    "; checkInputInt (temp[i].marksStudent.mark5, 0, 12);
         cin.get();
      }
-
 }
 
 
-void  average_mark(Student* t, const int& n, double* average)  //Ïðîòîòèï ôóíêö³¿ ñåðåäíÿ îö³íêà 
-{ //Çì³ííà äëÿ ï³äðàõóíêè ñóìè îö³íîê êîæíîãî ñòóäåíòà
+void  average_mark(Student* t, const int& n, double* average)  //ÐŸÑ€Ð¾Ñ‚Ð¾Ñ‚Ð¸Ð¿ Ñ„ÑƒÐ½ÐºÑ†Ñ–Ñ— ÑÐµÑ€ÐµÐ´Ð½Ñ Ð¾Ñ†Ñ–Ð½ÐºÐ° 
+{ //Ð—Ð¼Ñ–Ð½Ð½Ð° Ð´Ð»Ñ Ð¿Ñ–Ð´Ñ€Ð°Ñ…ÑƒÐ½ÐºÐ¸ ÑÑƒÐ¼Ð¸ Ð¾Ñ†Ñ–Ð½Ð¾Ðº ÐºÐ¾Ð¶Ð½Ð¾Ð³Ð¾ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°
 
     for (int i = 0; i < n; i++)
     {
-        //íàõîäèì ñðåäíèé áàë êàæäîãî ñòóäåíòà
+        //Ð½Ð°Ñ…Ð¾Ð´Ð¸Ð¼ ÑÑ€ÐµÐ´Ð½Ð¸Ð¹ Ð±Ð°Ð» ÐºÐ°Ð¶Ð´Ð¾Ð³Ð¾ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°
         average[i] = (double)(t[i].marksStudent.mark1 + 
                               t[i].marksStudent.mark2 +
                               t[i].marksStudent.mark3 +
@@ -41,30 +42,29 @@ void  average_mark(Student* t, const int& n, double* average)  //Ïðîòîòèï ôóíêö³
                               t[i].marksStudent.mark5) / 5;
 
     }
-
 }
 
 
 void Show(fstream& file, Student* temp, const int &n, const double* av)
 {
-    file<< "Âèâåäåìî äàíi ïðî ñòóäåíòiâ ñåðåäí³é áàë ÿêèõ á³ëüøå çà 4.5 " << endl;
+    file<< "Ð’Ð¸Ð²ÐµÐ´ÐµÐ¼Ð¾ Ð´Ð°Ð½i Ð¿Ñ€Ð¾ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚iÐ² ÑÐµÑ€ÐµÐ´Ð½Ñ–Ð¹ Ð±Ð°Ð» ÑÐºÐ¸Ñ… Ð±Ñ–Ð»ÑŒÑˆÐµ Ð·Ð° 4.5 " << endl;
     file << "_ _ _ _ _ _  _ _ _ _ _ _ _ _ _ _ __ _ _ _ _ __ _ _ _ _ __ _ _ _ _ __ _ _ _ _ __ _ _ _ _ _\n";
     for (int i = 0; i < n; i++)
     {
         if (av[i] > 4.5)
         {
             
-           file << "Iì'ÿ ñòóäåíòà : \t" << temp[i].surname << endl;
-           file << "Ñòóäåíò ãðóïè ¹ :\t" << temp[i].group << endl;
-           file << "Îöiíêè ñòóäåíòà: ["
+           file << "IÐ¼'Ñ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° : \t" << temp[i].surname << endl;
+           file << "Ð¡Ñ‚ÑƒÐ´ÐµÐ½Ñ‚ Ð³Ñ€ÑƒÐ¿Ð¸ â„– :\t" << temp[i].group << endl;
+           file << "ÐžÑ†iÐ½ÐºÐ¸ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°: ["
                 << temp[i].marksStudent.mark1 << " | "
                 << temp[i].marksStudent.mark2 << " | "
                 << temp[i].marksStudent.mark3 << " | "
                 << temp[i].marksStudent.mark4 << " | "
                 << temp[i].marksStudent.mark5 << " | " << endl; 
 
-           file << "Äåíü íàðîäæåííÿ â ñòóäåíòà : ";   file << temp[i].Birthday;
-           file << "Ñåðåäíÿ îöiíêà :" << av[i] << endl;
+           file << "Ð”ÐµÐ½ÑŒ Ð½Ð°Ñ€Ð¾Ð´Ð¶ÐµÐ½Ð½Ñ Ð² ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° : ";   file << temp[i].Birthday;
+           file << "Ð¡ÐµÑ€ÐµÐ´Ð½Ñ Ð¾Ñ†iÐ½ÐºÐ° :" << av[i] << endl;
         }
         file<< "_ _ _ _ _ _  _ _ _ _ _ _ _ _ _ _ __ _ _ _ _ __ _ _ _ _ __ _ _ _ _ __ _ _ _ _ __ _ _ _ _ _\n";
     }
