@@ -1,28 +1,40 @@
+//////////////////////////////////
+//Р¤Р°Р№Р»-РѕРїРёСЃ СЃС‚СЂСѓРєС‚СѓСЂРё СЃС‚СѓРґРµРЅС‚ ////
+//////////////////////////////////
+
 #pragma once
 #include"Data.h"
 
 
-const int lengt = 20;
+const int lengt = 20; //РљС–Р»СЊРєС–СЃС‚СЊ СЃРёРјРІРѕР»С–РІ СЏРєРµ РјРѕР¶Рµ РјС–СЃС‚РёС‚Рё С–Рј'СЏ РІРєР»СЋС‡Р°СЋС‡Рё '\0'
 struct marks
 {
-    int mark1;// Оцінка з математики  
-    int mark2;// Оцінка з українсьокої мови 
-    int mark3;// Оцінка з хімії 
-    int mark4;// Оцінка з біології 
-    int mark5;// Оцінка з фізкультури  
+    int mark1;// РћС†С–РЅРєР° Р· РјР°С‚РµРјР°С‚РёРєРё  
+    int mark2;// РћС†С–РЅРєР° Р· СѓРєСЂР°С—РЅСЃСЊРѕРєРѕС— РјРѕРІРё 
+    int mark3;// РћС†С–РЅРєР° Р· С…С–РјС–С— 
+    int mark4;// РћС†С–РЅРєР° Р· Р±С–РѕР»РѕРіС–С— 
+    int mark5;// РћС†С–РЅРєР° Р· С„С–Р·РєСѓР»СЊС‚СѓСЂРё  
 };
 
 struct Student
 {
     
-     char   surname[ lengt ];  //Прізвище студента
-    int group;         //номер групи
-    Data  Birthday;    //Дата народження
-    marks marksStudent;//Оцінки
+     char   surname[ lengt ];  //РџСЂС–Р·РІРёС‰Рµ СЃС‚СѓРґРµРЅС‚Р°
+    int group;                 //РЅРѕРјРµСЂ РіСЂСѓРїРё
+    Data  Birthday;            //Р”Р°С‚Р° РЅР°СЂРѕРґР¶РµРЅРЅСЏ
+    marks marksStudent;        //РћС†С–РЅРєРё
 
 
 };
-void average_mark(Student* temp, const int &n, double * average);//Прототип функції середня оцінка 
-void input(Student* temp, const int& n);                        //Прототип  функції для вводу на екран
-void Show(fstream&file ,Student* temp, const int& n, const double* av)  ;//Прототип функції для виводу на екран
+
+void average_mark(Student* temp, const int &n, double * average);        //РџСЂРѕС‚РѕС‚РёРї С„СѓРЅРєС†С–С— СЃРµСЂРµРґРЅСЏ РѕС†С–РЅРєР° 
+void input(Student* temp, const int& n);                                 //РџСЂРѕС‚РѕС‚РёРї  С„СѓРЅРєС†С–С— РґР»СЏ РІРІРѕРґСѓ РЅР° РµРєСЂР°РЅ
+void Show(fstream&file ,Student* temp, const int& n, const double* av)  ;//РџСЂРѕС‚РѕС‚РёРї С„СѓРЅРєС†С–С— РґР»СЏ РІРёРІРѕРґСѓ РЅР° РµРєСЂР°РЅ
+
+
+
+
+
+
+
 
